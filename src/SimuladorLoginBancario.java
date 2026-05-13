@@ -5,14 +5,18 @@ public class SimuladorLoginBancario {
 
         Scanner scanner = new Scanner(System.in);
 
+        String agencia = "1234";
+        String conta = "123";
+        String senha = "789";
+
         System.out.print("Digite sua agência: ");
-        String agencia = scanner.nextLine();
+        String agenciaInput = scanner.nextLine();
 
         System.out.print("Digite o Numero da sua Conta: ");
-        String conta = scanner.nextLine();
+        String contaInput = scanner.nextLine();
 
         System.out.print("Digite sua Senha: ");
-        String senha = scanner.nextLine();
+        String senhaInput = scanner.nextLine();
 
         double saldo = 10000.00;
 
@@ -23,23 +27,23 @@ public class SimuladorLoginBancario {
                        Seu saldo é de: R$%.2f
                        """.formatted(saldo);
 
-        if (!agencia.equals("1") && conta.equals("5")) {
+        if (!agenciaInput.equals(agencia) && contaInput.equals(conta)) {
             System.out.println("Numero da Agência esta incorreta.");
             System.exit(0);
         }
-        else if(agencia.equals("1") && !conta.equals("5")) {
+        else if(agenciaInput.equals(agencia) && !contaInput.equals(senha)) {
             System.out.println("Numero da Conta esta incorreto.");
             System.exit(0);
         }
-        else if(agencia.equals("1") && conta.equals("5") && !senha.equals("123")) {
+        else if(agenciaInput.equals(agencia) && contaInput.equals(conta) && !senhaInput.equals(senha)) {
             System.out.println("Sua senha esta incorreta.");
             System.exit(0);
         }
-        else if(!agencia.equals("1") && !conta.equals("5") && !senha.equals("123")) {
+        else if(!agenciaInput.equals(agencia) && !contaInput.equals(conta) && !senhaInput.equals(senha)) {
             System.out.println("Verifique se seus dados estão corretos.");
             System.exit(0);
         }
-        else if(agencia.equals("1") && conta.equals("5") && senha.equals("123")) {
+        else if(agenciaInput.equals(agencia) && contaInput.equals(conta) && senhaInput.equals(senha)) {
             System.out.println(texto);
             if (saldo <= 5000){
                 System.out.print("Com base em seus investimentos e saldos, seu perfil é: Cliente Standard");
@@ -74,10 +78,13 @@ public class SimuladorLoginBancario {
                         System.out.println();
                         System.out.print("Insira sua senha:");
                         String senhaSaldo = scanner.nextLine();
-                            if(senhaSaldo.equals("123")){
+                            if(senhaSaldo.equals(senha)){
                                 double calculoSaque = saldo - saque;
                                 System.out.println();
-                                System.out.printf("Seu saldo agora é: R$%.2f%n", calculoSaque);
+                                System.out.printf("""
+                                                  Saque feito com sucesso!
+                                                  Seu saldo agora é: R$%.2f%n
+                                                  """, calculoSaque);
                             } else{
                                 System.out.println("Senha incorreta.");
                             }
@@ -94,9 +101,12 @@ public class SimuladorLoginBancario {
                 System.out.print("Digite sua Senha: ");
                 String senhaDepo = scanner.nextLine();
                 System.out.println();
-                    if(senhaDepo.equals("123")) {
+                    if(senhaDepo.equals(senha)) {
                         double calculoDepo = saldo + deposito;
-                        System.out.printf("Seu saldo atual é: R$%.2f%n", calculoDepo);
+                        System.out.printf("""
+                                          Deposito recebido com sucesso"
+                                          Seu saldo atual é: R$%.2f%n
+                                          """, calculoDepo);
                     } else{
                         System.out.println("Senha incorreta.");
                     }
