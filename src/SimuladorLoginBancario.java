@@ -96,7 +96,10 @@ public class SimuladorLoginBancario {
                 System.out.println();
                     if(senhaDepo.equals("123")) {
                         double calculoDepo = saldo + deposito;
-                        System.out.printf("Seu saldo atual é: R$%.2f%n", calculoDepo);
+                        System.out.printf("""
+                                          Deposito recebido com sucesso!
+                                          Seu saldo atual é: R$%.2f%n
+                                          """, calculoDepo);
                     } else{
                         System.out.println("Senha incorreta.");
                     }
