@@ -37,7 +37,7 @@ public class MenuBancario {
 
                     switch(inputEscolha) {
                         case 1:
-                            System.out.println("Seu saldo é de: R$%.2f".formatted(saldo));
+                            System.out.printf("Seu saldo é de: R$%.2f%n", saldo);
                             System.out.println();
                             break;
                         case 2:
@@ -47,9 +47,9 @@ public class MenuBancario {
 
                             if (inputSaque <= saldo) {
                                 saldo -= inputSaque;
-                                System.out.println("""
+                                System.out.printf("""
                                         Saque concluido com sucesso.
-                                        Seu saldo atual é de: R$%.2f""".formatted(calculoSaque));
+                                        Seu saldo atual é de: R$%.2f%n""", calculoSaque);
                                 System.out.println();
                             } else {
                                 System.out.println("Valor acima do saldo em conta.");
@@ -63,7 +63,7 @@ public class MenuBancario {
                             double calculoDepo = saldo + inputDeposito;
                             saldo += inputDeposito;
 
-                            System.out.println("Seu saldo atual é de: R$%.2f".formatted(calculoDepo));
+                            System.out.printf("Seu saldo atual é de: R$%.2f%n", calculoDepo);
                             System.out.println();
                             break;
 
