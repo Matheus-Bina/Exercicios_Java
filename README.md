@@ -6,7 +6,7 @@ Repositório de estudos práticos em Java, com exercícios aplicados ao universo
 
 Sobre
 
-Este repositório reúne os exercícios desenvolvidos ao longo dos meus estudos de Java, organizados como tarefas (cards) no formato de um time de desenvolvimento real — com critérios de aceite, casos de borda e revisão de código a cada entrega. Cada exercício simula um cenário do dia a dia de sistemas bancários: autenticação de usuários, processamento de transações, simuladores de investimento e empréstimo, análise de crédito, validação de chaves PIX, centrais de atendimento, entre outros.
+Este repositório reúne os exercícios desenvolvidos ao longo dos meus estudos de Java, organizados como tarefas (cards) no formato de um time de desenvolvimento real com critérios de aceite, casos de borda e revisão de código a cada entrega. Cada exercício simula um cenário do dia a dia de sistemas bancários: autenticação de usuários, processamento de transações, simuladores de investimento e empréstimo, análise de crédito, validação de chaves PIX, centrais de atendimento, entre outros.
 
 A escolha pelo tema bancário não é por acaso: cada exercício foi pensado para se aproximar de regras de negócio reais.
 
@@ -20,12 +20,12 @@ IDEA Versionamento: Git & GitHub
 
 Conteúdo coberto
 
-Fundamentos — tipos primitivos, operadores aritméticos, lógicos, relacionais e de atribuição
-Estruturas de controle — if / else / else if, switch / case
-Estruturas de repetição — for, while, do-while, incluindo laços aninhados
-Entrada de dados — Scanner e tratamento de buffer de entrada
-Formatação de saída — printf, String.formatted(), text blocks
-Boas práticas — validação de dados, controle de fluxo e tratamento de cenários de erro
+Fundamentos/tipos primitivos, operadores aritméticos, lógicos, relacionais e de atribuição
+Estruturas de controle: if / else / else if, switch / case
+Estruturas de repetição: for, while, do-while, incluindo laços aninhados
+Entrada de dados: Scanner e tratamento de buffer de entrada
+Formatação de saída: printf, String.formatted(), text blocks
+Boas práticas: validação de dados, controle de fluxo e tratamento de cenários de erro
 
 
 Exemplos de exercícios
