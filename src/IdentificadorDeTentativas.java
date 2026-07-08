@@ -60,13 +60,19 @@ public class IdentificadorDeTentativas {
                             double inputSaque2 = scanner.nextDouble();
                             scanner.nextLine();
 
-                            maxSaquesDia--;              // 1º decrementa
-                            saldo -= inputSaque2;        // 2º processa o saque
+                            if (inputSaque2 > limiteSaque) {
+                                maxTentativasSus--;
+                                System.out.println("Saque acima do limite. Tentativa registrada como suspeita.");
+                            } else {
+                                maxSaquesDia--;
+                                saldo -= inputSaque2;
+                            }
+
                             System.out.println();
                             System.out.printf("Saque concluído! Saldo: R$%.2f%n", saldo);
 
                             if (maxSaquesDia > 0) {      // 3º só depois checa se ainda tem saques disponíveis
-                                System.out.print("Deseja fazer outro saque?...");
+                                System.out.print("Deseja fazer outro saque? Digite 'Novo Saque' ou 'Sair':");
                                 novoSaque = scanner.nextLine();
                             } else {
                                 System.out.println("Limite diário de saques atingido.");
