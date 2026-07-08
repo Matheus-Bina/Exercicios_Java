@@ -76,7 +76,6 @@ public class CentralAtendimento {
                 if (escolhaContaCorrente == 1){
                     System.out.println();
                     System.out.print("Deseja fazer um saque?");
-                    scanner.nextLine();
                     String escolhaSaque = scanner.nextLine();
                         if (escolhaSaque.equalsIgnoreCase("sim")){
                             System.out.print("Digite quanto deseja sacar: R$");
