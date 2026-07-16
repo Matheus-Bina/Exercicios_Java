@@ -27,11 +27,11 @@ public class SimuladorLoginBancario {
                        Seu saldo é de: R$%.2f
                        """.formatted(saldo);
 
-        if (agenciaInput.equals(agencia) && contaInput.equals(conta)) {
+        if (!agenciaInput.equals(agencia) && contaInput.equals(conta)) {
             System.out.println("Numero da Agência esta incorreta.");
             System.exit(0);
         }
-        else if(agenciaInput.equals(agencia) && !contaInput.equals(senha)) {
+        else if(agenciaInput.equals(agencia) && !contaInput.equals(conta)) {
             System.out.println("Numero da Conta esta incorreto.");
             System.exit(0);
         }
